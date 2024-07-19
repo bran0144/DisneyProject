@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Parks</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+		function showform(dowhat) {
+			/*
+			* four DIVS: browse, insert, update, delete
+			* this function sets one visible the others not
+			*/
+			if (dowhat == 'insert'){
+				document.getElementById('browse').style.display = 'none';
+				document.getElementById('insert').style.display = 'block';
+				document.getElementById('update').style.display = 'none';
+				document.getElementById('delete').style.display = 'none';
+			}
+			else if (dowhat == 'update'){
+				document.getElementById('browse').style.display = 'none';
+				document.getElementById('insert').style.display = 'none';
+				document.getElementById('update').style.display = 'block';
+				document.getElementById('delete').style.display = 'none';
+			}
+			else if (dowhat == 'delete'){
+				document.getElementById('browse').style.display = 'none';
+				document.getElementById('insert').style.display = 'none';
+				document.getElementById('update').style.display = 'none';
+				document.getElementById('delete').style.display = 'block';
+			}
+      else if (dowhat == 'all'){
+				document.getElementById('browse').style.display = 'block';
+				document.getElementById('insert').style.display = 'block';
+				document.getElementById('update').style.display = 'block';
+				document.getElementById('delete').style.display = 'block';
+			}
+			else { //by default display browse
+				document.getElementById('browse').style.display = 'block';
+				document.getElementById('insert').style.display = 'none';
+				document.getElementById('update').style.display = 'none';
+				document.getElementById('delete').style.display = 'none';
+			}
+		}
+    function newPark() { showform('insert'); }
+    function updatePark(pid) { showform('update'); }
+    function deletePark(pid) { showform ('delete'); }
+    function browseParks() { showform ('browse'); }
+    function showAll() { showform ('all'); }
+</script>
+</head>
+
+<body onload="browseParks()">
+<h1>Parks</h1>
+
+[ <a href="planets.html">Planets</a> | <a href="parks.html">Parks</a> | Certifications | People Certified ]
+
+<div id="browse">
+<p><a href="#" onClick="showAll()">Display all forms</a> </p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#" onClick="newPark()">New</a></th>
+    <th></th>
+    <th>park_id</th>
+    <th>park_name</th>
+    <th>park_hours</th>
+    <th>nighttime_show</th>
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
+    <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
+    <td align="right" >1</td>
+    <td >Magic Kingdom</td>
+    <td align="right" >8:00am-11:00pm</td>
+    <td>Happily Ever After</td>
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
+    <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
+    <td align="right" >2</td>
+    <td>Animal Kingtom</td>
+    <td align="right" >9:00am-6:00pm</td>
+    <td ><em>NULL</em></td>
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
+    <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
+    <td>3</td>
+    <td>Epcot</td>
+    <td align="right" >9:00am-9:00pm</td>
+    <td>Luminous The Symphony of Us</td>
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
+    <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
+    <td>3</td>
+    <td>Disney's Hollywood Studios</td>
+    <td align="right" >8:00am-10:00pm</td>
+    <td>Fantasmic</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert">
+    <form method="POST" id="addPark">
+        <legend><strong>Add Park</strong></legend>
+          <fieldset class="fields">
+            <label> park name </label> <input type="text" name="pname">
+            <label> park hours </label> <input type="text" name="hours">
+            <label> nighttime show </label> <select name="nighttime_show">
+            	<option value="0">&nbsp;</option>
+                <option value="1">Typhoon Lagoon</option>
+                <option value="2">9:00am-5:00pm</option>
+                <option value="3">NULL</option>
+                </select>
+      </fieldset>
+          <input class="btn" type="submit" id="addParks" value="Add Park">
+          <input class="btn" type="button" value="cancel" onClick="browsePark()">
+	</form> 
+</div><!-- insert -->
+<p>&nbsp;</p>
+<div id="update">
+    <form method="POST" id="UpdatePark">
+        <legend><strong>Update Park</strong></legend>
+          <fieldset class="fields">
+          <input type="hidden" name="parkID" id="updateparkID" value="1">
+          <label> ID: </label> 1
+            <label> park name </label> <input type="text" name="fname" value="Magic Kingdom">
+            <label> park hours </label> <input type="text" name="lname" value="8:00am-11:00pm">
+            <label> nighttime show </label> <select name="nighttime_show">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>Disney's Magic Kingdom</option>
+                <option value="2">9:00am-10:00pm</option>
+                <option value="3">Wishes</option>
+                </select>
+            <label> age </label> <input type="text" name="age" value="61">
+      </fieldset>
+          <input class="btn" type="submit" id="UpdateSavePark" value="Save Update Park">
+          <input class="btn" type="button" value="cancel" onClick="browsePark()">
+	</form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<div id="delete" style="display: block">
+  <form method="POST" id="deletePark">
+      <legend><strong>Delete Park</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <input type="hidden" name="parkID" id="deleteparkID" value="1">
+          <label><strong>ID:</strong></label> 1
+            <label> <strong>Park Name</strong> </label> Magic Kingdom
+            
+    </fieldset>
+    <input class="btn" type="submit" id="DeletePark" value="Delete Park">
+          <input class="btn" type="button" value="cancel" onClick="browsePark()">
+  </form> 
+</div><!-- delete -->
+
+</body>
+</html>
