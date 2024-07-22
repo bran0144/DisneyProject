@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Restaurants</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rides</h1>
+
+[ <a href="parks.html">Parks</a> | <a href="rides.html">Rides</a> | <a href="visitors.html">Visitors</a> | <a href="restaurants.html">Restaurants</a>  ]
+<div id="browse" style="display: block">
+<p><strong>Browse Restaurants</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>restaurant_name</th>
+    <th>park_id</th>
+    <th>reservations_accepted</th>
+    <th>character_dining</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >1</td>
+    <td >Backlot Express</td>
+    <td align="right" >4</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >2</td>
+    <td>Tiffins</td>
+    <td align="right" >2</td>
+    <td >1</td>
+    <td >0</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>Akershus Royal Banquet Hall</td>
+    <td align="right" >3</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addRide">
+        <legend><strong>Add Restaurant</strong></legend>
+          <fieldset class="fields">
+            <label> Restaurant Name </label> <input type="text" name="restaurant_name">
+            <label> Park ID </label> <input type="text" name="park_id">
+            <label> Reservations Accepted</label> <input type="text" name="reservations_accepted">
+            <label> Character Dining</label> <input type="text" name="character_dining">
+          </fieldset>
+          <input class="btn" type="submit" id="addRestaurants" value="Add a Restaurant">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new restaurant-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateRestaurant">
+      <legend><strong>Update Restaurant</strong></legend>
+          <fieldset class="fields">
+          <label>ID:</label> 1
+            <label> Restaurant Name </label> <input type="text" value="Backlot Express" name="restaurant_name">
+            <label> Park_ID </label> <input type="text"  name="park_id" value="4">
+            <label> Reservations Accepted </label> <input type="text" name="reservations_accepted" value="0">
+            <label> character Dining </label> <input type="text" name="character_dining" value="0">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveRestaurant" value="Save Update Restaurant">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<div id="delete" style="display: block">
+  <form id="deleteRestaurant">
+      <legend><strong>Delete Restaurant</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Restaurant Name </label> Backlot Express
+            
+    </fieldset>
+    <input class="btn" type="submit" id="deleteRestaurants" value="Delete Restaurant">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- delete -->
+</body>
+</html>

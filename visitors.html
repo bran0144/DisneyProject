@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Visitors</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rides</h1>
+
+[ <a href="parks.html">Parks</a> | <a href="rides.html">Rides</a> | <a href="visitors.html">Visitors</a> | People Certified ]
+<div id="browse" style="display: block">
+<p><strong>Browse Visitors</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>visitor_name</th>
+    <th>height</th>
+    <th>email</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >1</td>
+    <td >John Smith</td>
+    <td align="right" >72</td>
+    <td>jsmith@hello.com</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >2</td>
+    <td>Susie Smith</td>
+    <td align="right" >64</td>
+    <td >ssmith@hello.com</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>Timmy Smith</td>
+    <td align="right" >38</td>
+    <td>NULL</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addRide">
+        <legend><strong>Add Visitor</strong></legend>
+          <fieldset class="fields">
+            <label> Visitor Name </label> <input type="text" name="visitor_name">
+            <label> Height </label> <input type="text" name="height">
+            <label> Email </label> <input type="text" name="email">
+          </fieldset>
+          <input class="btn" type="submit" id="addVisitors" value="Add a Visitor">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new visitor-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateVisitor">
+      <legend><strong>Update Visitor</strong></legend>
+          <fieldset class="fields">
+          <label>ID:</label> 1
+            <label> Visitor Name </label> <input type="text" value="John Smith" name="visitor_name">
+            <label> Height </label> <input type="text"  name="height" value="72">
+            <label> Email </label> <input type="text" name="email" value="jsmith@hello.com">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveVisitor" value="Save Update Visitor">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<div id="delete" style="display: block">
+  <form id="deleteVisitor">
+      <legend><strong>Delete Visitor</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Visitor Name </label> John Smith
+            
+    </fieldset>
+    <input class="btn" type="submit" id="DeleteVisitor" value="Delete Visitor">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- delete -->
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Touring Plans</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rides</h1>
+
+[ <a href="parks.html">Parks</a> | <a href="rides.html">Rides</a> | <a href="visitors.html">Visitors</a> | <a href="restaurants.html">Restaurants</a>  ]
+<div id="browse" style="display: block">
+<p><strong>Browse Touring Plans</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>plan_name</th>
+    <th>park_id</th>
+    <th>visit_date</th>
+    <th>visitor_id</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >1</td>
+    <td >Halloween at Magic Kingdom</td>
+    <td align="right" >1</td>
+    <td>10/31/24</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >2</td>
+    <td>Animal Kingdom Day</td>
+    <td align="right" >2</td>
+    <td >11/1/24</td>
+    <td >1</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td>3</td>
+    <td>Christmas Day at Epcot</td>
+    <td align="right" >3</td>
+    <td>12/25/24</td>
+    <td>6</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addRide">
+        <legend><strong>Add Touring Plan</strong></legend>
+          <fieldset class="fields">
+            <label> Plan Name </label> <input type="text" name="plan_name">
+            <label> Park ID </label> <input type="text" name="park_id">
+            <label> Visit Date</label> <input type="text" name="visit_date">
+            <label> Visitor ID</label> <input type="text" name="visitor_id">
+          </fieldset>
+          <input class="btn" type="submit" id="addTouringPlans" value="Add a Touring Plan">
+          <input class="btn" type="button" value="cancel">
+	</form> <!--add new touring plan-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateTouringPlan">
+      <legend><strong>Update Touring Plan</strong></legend>
+          <fieldset class="fields">
+          <label>ID:</label> 1
+            <label> Plan Name </label> <input type="text" value="Halloween at Magic Kingdom" name="plan_name">
+            <label> Park_ID </label> <input type="text"  name="park_id" value="1">
+            <label> Visit Date </label> <input type="text" name="visit_date" value="10/31/24">
+            <label> Visitor ID </label> <input type="text" name="character_dining" value="1">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveTouringPlan" value="Save Update Touring Plan">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<div id="delete" style="display: block">
+  <form id="deleteTouringPlan">
+      <legend><strong>Delete Touring Plan</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Plan Name </label> Halloween at Magic Kingdom
+            
+    </fieldset>
+    <input class="btn" type="submit" id="deleteTouringPlans" value="Delete Touring Plan">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div><!-- delete -->
+</body>
+</html>
