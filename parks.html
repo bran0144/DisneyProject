@@ -2,7 +2,7 @@
 <head>
 <title>Parks</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript">
+<!-- <script language="JavaScript">
 		function showform(dowhat) {
 			/*
 			* four DIVS: browse, insert, update, delete
@@ -44,13 +44,13 @@
     function deletePark(pid) { showform ('delete'); }
     function browseParks() { showform ('browse'); }
     function showAll() { showform ('all'); }
-</script>
+</script> -->
 </head>
 
 <body onload="browseParks()">
 <h1>Parks</h1>
 
-[ <a href="parks.html">Parks</a> | <a href="rides.html">Rides</a> | Certifications | People Certified ]
+[ <a href="parks.html">Parks</a> | <a href="rides.html">Rides</a> | <a href="visitors.html">Visitors</a> | <a href="restaurants.html">Restaurants</a>  ]
 
 <div id="browse">
 <p><a href="#" onClick="showAll()">Display all forms</a> </p>
@@ -82,7 +82,7 @@
   <tr>
     <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
     <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
-    <td>3</td>
+    <td align="right" >3</td>
     <td>Epcot</td>
     <td align="right" >9:00am-9:00pm</td>
     <td>Luminous The Symphony of Us</td>
@@ -90,7 +90,7 @@
   <tr>
     <td><a href="#" onClick="updatePark('this.parkID')">Edit</a></td>
     <td><a href="#" onclick="deletePark('this.parkID')">Delete</a></td>
-    <td>3</td>
+    <td align="right" >3</td>
     <td>Disney's Hollywood Studios</td>
     <td align="right" >8:00am-10:00pm</td>
     <td>Fantasmic</td>
@@ -102,9 +102,9 @@
     <form method="POST" id="addPark">
         <legend><strong>Add Park</strong></legend>
           <fieldset class="fields">
-            <label> park name </label> <input type="text" name="pname">
-            <label> park hours </label> <input type="text" name="hours">
-            <label> nighttime show </label> <select name="nighttime_show">
+            <label> park name </label> <input type="text" name="parkName">
+            <label> park hours </label> <input type="text" name="parkHours">
+            <label> nighttime show </label> <select name="nighttimeShow">
             	<option value="0">&nbsp;</option>
                 <option value="1">Typhoon Lagoon</option>
                 <option value="2">9:00am-5:00pm</option>
@@ -114,30 +114,13 @@
           <input class="btn" type="submit" id="addParks" value="Add Park">
           <input class="btn" type="button" value="cancel" onClick="browsePark()">
 	</form> 
-</div><!-- insert -->
+</div>
+<!-- insert
 <p>&nbsp;</p>
-<div id="update">
-    <form method="POST" id="UpdatePark">
-        <legend><strong>Update Park</strong></legend>
-          <fieldset class="fields">
-          <input type="hidden" name="parkID" id="updateparkID" value="1">
-          <label> ID: </label> 1
-            <label> park name </label> <input type="text" name="fname" value="Magic Kingdom">
-            <label> park hours </label> <input type="text" name="lname" value="8:00am-11:00pm">
-            <label> nighttime show </label> <select name="nighttime_show">
-            	<option value="0">&nbsp;</option>
-                <option value="1" selected>Disney's Magic Kingdom</option>
-                <option value="2">9:00am-10:00pm</option>
-                <option value="3">Wishes</option>
-                </select>
-            <label> age </label> <input type="text" name="age" value="61">
-      </fieldset>
-          <input class="btn" type="submit" id="UpdateSavePark" value="Save Update Park">
-          <input class="btn" type="button" value="cancel" onClick="browsePark()">
-	</form> 
-</div><!-- update -->
+
+<update -->
 <p>&nbsp;</p>
-<div id="delete" style="display: block">
+<!-- <div id="delete" style="display: block">
   <form method="POST" id="deletePark">
       <legend><strong>Delete Park</strong></legend>
           <fieldset class="fields">
@@ -150,7 +133,8 @@
     <input class="btn" type="submit" id="DeletePark" value="Delete Park">
           <input class="btn" type="button" value="cancel" onClick="browsePark()">
   </form> 
-</div><!-- delete -->
+</div> --> 
+<!-- delete -->
 
 </body>
 </html>
