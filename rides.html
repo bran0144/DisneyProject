@@ -62,7 +62,12 @@
             <label> Height Restriction </label> <input type="text" name="height_restriction">
             <label> Lightning Lane </label> <input type="text" name="lightning_lane">
             <label> Ride Length </label> <input type="text" name="ride_length">
-            <label> Park Name</label> <input type="text" name="ride_length">
+            <label> Park Name</label> <select name="parks" id="parks">
+              <option value="magic_kingdom">Magic Kingdom</option>
+              <option value="animal_kingdom">Animal Kingdom</option>
+              <option value="epcot">Epcot</option>
+              <option value="disneys_hollywood_studios">Disney's Hollywood Studios</option>
+            </select>
           </fieldset>
           <input class="btn" type="submit" id="addRides" value="Add a Ride">
           <input class="btn" type="button" value="cancel">
